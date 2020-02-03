@@ -8,7 +8,7 @@ This repository describes setting up three open source Edge Platforms, and inclu
 
 The MQTT messages are timestamped by each stage in their processing, and the difference in the timestamps are visualized with the help of Node-Red. 
 
-![latency.png](:/55fa409a9c074e6bb3d4dedcf6bc6dd3)
+![Expected typical results](https://github.com/dcsouthwick/edge-metrics/blob/master/latency.png)
 
 
 
