@@ -44,18 +44,18 @@ node-red (flow creation)
 
 note:
 * replace the below IP with your device IP from `ifconfig`
-* replace path where you checked out this repo: `-v /home/pi/edge-benchmarking-suite/vir-mqtt-dev`
+* replace path where you checked out this repo: `-v /home/pi/edge-metrics/vir-mqtt-dev`
 
 on your Raspberry Pi communication node:
 ```
 docker run -d --rm --name=mqtt-scripts \
--v /home/ubuntu/edge-benchmarking-suite/vir-mqtt-dev:/scripts \
+-v /home/ubuntu/edge-metrics/vir-mqtt-dev:/scripts \
 dersimn/mqtt-scripts:armhf --url mqtt://192.168.1.1 --dir /scripts
 ```
 * Or on a x86 machine:
 ```
 docker run -d --rm --name=mqtt-scripts \
--v /home/dsouthwi/edge-benchmarking-suite/vir-mqtt-dev:/scripts  \
+-v /home/dsouthwi/edge-metrics/vir-mqtt-dev:/scripts  \
 dersimn/mqtt-scripts --url mqtt://128.141.207.157 --dir /scripts
 ```
 
