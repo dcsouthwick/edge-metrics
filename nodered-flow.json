@@ -1,10 +1,318 @@
 [
     {
+        "id": "35025de2.a5355a",
+        "type": "tab",
+        "label": "Broker Input",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3d374899.d65d28",
+        "type": "tab",
+        "label": "MQTT Dashboard",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "229cfe5b.2079a2",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "b9ca3d1d.17dd3",
+        "type": "ui_group",
+        "z": "",
+        "name": "EdgeX",
+        "tab": "3bc16d97.0bbf7a",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "91fa4344.21dee8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Kura",
+        "tab": "3bc16d97.0bbf7a",
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "6c780367.6c7ed4",
+        "type": "ui_group",
+        "z": "",
+        "name": "Flogo",
+        "tab": "3bc16d97.0bbf7a",
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "3bc16d97.0bbf7a",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Random Number",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "56db2886.1ee39",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "10.195.69.223",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "2621795f.74f096",
+        "type": "link in",
+        "z": "3d374899.d65d28",
+        "name": "From Subscriber",
+        "links": [
+            "e0e7d9bf.1da28"
+        ],
+        "x": 95,
+        "y": 520,
+        "wires": [
+            [
+                "a77de266.4a3178",
+                "fafb7d7e.8ae9e"
+            ]
+        ]
+    },
+    {
+        "id": "a77de266.4a3178",
+        "type": "debug",
+        "z": "3d374899.d65d28",
+        "name": "All incoming log",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 260,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "5312c3d9.1cd464",
+        "type": "function",
+        "z": "3d374899.d65d28",
+        "name": "parse edgex",
+        "func": "var latency = {};\nvar funct = {};\nvar core = msg.payload.origin-msg.payload.readings[0].origin;\nvar nano = msg.payload.origin/1000000;\n\nlatency.payload = nano - Number(msg.payload.readings[0].value);\nlatency.topic = \"End-to-End\";\nfunct.payload = core/1000000;\nfunct.topic = \"Core processes\";\nreturn [latency, funct];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 430,
+        "y": 420,
+        "wires": [
+            [
+                "9cbb2011.179a9",
+                "8a46b4de.e25b3"
+            ],
+            [
+                "9cbb2011.179a9"
+            ]
+        ]
+    },
+    {
+        "id": "fafb7d7e.8ae9e",
+        "type": "switch",
+        "z": "3d374899.d65d28",
+        "name": "Parse source",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "id",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "sentOn",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "cmd",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 230,
+        "y": 520,
+        "wires": [
+            [
+                "5312c3d9.1cd464"
+            ],
+            [
+                "e4af2f2d.7660f8"
+            ],
+            [
+                "502d358.4ca964c"
+            ]
+        ]
+    },
+    {
+        "id": "9cbb2011.179a9",
+        "type": "ui_chart",
+        "z": "3d374899.d65d28",
+        "name": "End-to-End latency Graph",
+        "group": "b9ca3d1d.17dd3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "End-to-End latency (ms)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Waiting for data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "60",
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 910,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "e4af2f2d.7660f8",
         "type": "function",
         "z": "3d374899.d65d28",
         "name": "parse kura",
-        "func": "var latency = {};\nvar funct = {};\nfunct.payload = msg.payload.metrics.creation;\n\nlatency.payload = msg.payload.sentOn-msg.payload.metrics.creation;\n\nreturn [latency, funct];",
+        "func": "var latency = {};\nvar funct = {};\n\nlatency.payload = msg.payload.sentOn-msg.payload.metrics.creation;\nlatency.topic = \"End-to-End\";\nfunct.payload = msg.payload.sentOn-msg.payload.metrics.kura;\nfunct.topic = \"Core processes\";\nreturn [latency, funct];",
         "outputs": 2,
         "noerr": 0,
         "x": 430,
@@ -14,7 +322,299 @@
                 "7fc119c5.99f7d8",
                 "75dcc3d4.d8840c"
             ],
+            [
+                "7fc119c5.99f7d8"
+            ]
+        ]
+    },
+    {
+        "id": "7fc119c5.99f7d8",
+        "type": "ui_chart",
+        "z": "3d374899.d65d28",
+        "name": "End-to-End Delay Graph",
+        "group": "91fa4344.21dee8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "End-to-end Latency (ms)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Waiting for data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "60",
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 910,
+        "y": 520,
+        "wires": [
             []
         ]
+    },
+    {
+        "id": "502d358.4ca964c",
+        "type": "function",
+        "z": "3d374899.d65d28",
+        "name": "parse flogo",
+        "func": "var latency = {};\nvar funct = {};\n\n\nlatency.payload = msg.payload.time-msg.payload.message;\n\n\nreturn [latency];",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 600,
+        "wires": [
+            [
+                "a5c74494.5a3fe",
+                "dc1f3f54.ff5418"
+            ]
+        ]
+    },
+    {
+        "id": "a5c74494.5a3fe",
+        "type": "ui_chart",
+        "z": "3d374899.d65d28",
+        "name": "End-to-End Delay Graph",
+        "group": "6c780367.6c7ed4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "End-to-end Latency (ms)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "60",
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 910,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5f17f9a2.87824",
+        "type": "mqtt in",
+        "z": "35025de2.a5355a",
+        "name": "flogo",
+        "topic": "flogo",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "56db2886.1ee39",
+        "x": 230,
+        "y": 280,
+        "wires": [
+            [
+                "e0e7d9bf.1da28"
+            ]
+        ]
+    },
+    {
+        "id": "e0e7d9bf.1da28",
+        "type": "link out",
+        "z": "35025de2.a5355a",
+        "name": "",
+        "links": [
+            "2621795f.74f096"
+        ],
+        "x": 395,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "f63fc524.faa3a",
+        "type": "mqtt in",
+        "z": "35025de2.a5355a",
+        "name": "edgex",
+        "topic": "edgex",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "56db2886.1ee39",
+        "x": 230,
+        "y": 340,
+        "wires": [
+            [
+                "e0e7d9bf.1da28"
+            ]
+        ]
+    },
+    {
+        "id": "85292c64.313a",
+        "type": "mqtt in",
+        "z": "35025de2.a5355a",
+        "name": "kura",
+        "topic": "sink/rpi/W1/kura",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "56db2886.1ee39",
+        "x": 230,
+        "y": 400,
+        "wires": [
+            [
+                "e0e7d9bf.1da28"
+            ]
+        ]
+    },
+    {
+        "id": "8a46b4de.e25b3",
+        "type": "function",
+        "z": "3d374899.d65d28",
+        "name": "Rolling Average",
+        "func": "// determines the average of all payload values passed in \n// over the specified time range\nconst range = 60 * 1000;   // window time millisecs\nlet buffer = context.get('buffer') || [];\nlet total = context.get('total') || 0;   // the accumulated total so far\n\nlet now = new Date();\nlet value = Number(msg.payload);\n// remove any samples that are too old\nwhile (buffer[0] && buffer[0].timestamp < now - range) {\n    // remove oldest sample from array and total\n    //node.warn(`removing oldest ${buffer[0].timestamp}`);\n    total -= buffer[0].value;\n    buffer.shift();\n}\n// add the new sample to the end\nbuffer.push({timestamp: now, value: value});\ntotal += value;\n\ncontext.set('buffer', buffer);\ncontext.set('total', total);\n\nmsg.payload = parseFloat(total/buffer.length).toFixed(2);\n//node.warn(`length: ${buffer.length}, total: ${total}, average: ${msg.payload}`);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 640,
+        "y": 360,
+        "wires": [
+            [
+                "a193477b.3af49"
+            ]
+        ]
+    },
+    {
+        "id": "a193477b.3af49",
+        "type": "ui_gauge",
+        "z": "3d374899.d65d28",
+        "name": "",
+        "group": "b9ca3d1d.17dd3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Rolling Average",
+        "label": "ms",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "60",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 880,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "75dcc3d4.d8840c",
+        "type": "function",
+        "z": "3d374899.d65d28",
+        "name": "Rolling Average",
+        "func": "// determines the average of all payload values passed in \n// over the specified time range\nconst range = 60 * 1000;   // window time millisecs\nlet buffer = context.get('buffer') || [];\nlet total = context.get('total') || 0;   // the accumulated total so far\n\nlet now = new Date();\nlet value = Number(msg.payload);\n// remove any samples that are too old\nwhile (buffer[0] && buffer[0].timestamp < now - range) {\n    // remove oldest sample from array and total\n    //node.warn(`removing oldest ${buffer[0].timestamp}`);\n    total -= buffer[0].value;\n    buffer.shift();\n}\n// add the new sample to the end\nbuffer.push({timestamp: now, value: value});\ntotal += value;\n\ncontext.set('buffer', buffer);\ncontext.set('total', total);\n\nmsg.payload = parseFloat(total/buffer.length).toFixed(2);\n//node.warn(`length: ${buffer.length}, total: ${total}, average: ${msg.payload}`);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 640,
+        "y": 480,
+        "wires": [
+            [
+                "67ff19d0.bb7ad8"
+            ]
+        ]
+    },
+    {
+        "id": "67ff19d0.bb7ad8",
+        "type": "ui_gauge",
+        "z": "3d374899.d65d28",
+        "name": "",
+        "group": "91fa4344.21dee8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Rolling Average",
+        "label": "ms",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "60",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 880,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "dc1f3f54.ff5418",
+        "type": "function",
+        "z": "3d374899.d65d28",
+        "name": "Rolling Average",
+        "func": "// determines the average of all payload values passed in \n// over the specified time range\nconst range = 60 * 1000;   // window time millisecs\nlet buffer = context.get('buffer') || [];\nlet total = context.get('total') || 0;   // the accumulated total so far\n\nlet now = new Date();\nlet value = Number(msg.payload);\n// remove any samples that are too old\nwhile (buffer[0] && buffer[0].timestamp < now - range) {\n    // remove oldest sample from array and total\n    //node.warn(`removing oldest ${buffer[0].timestamp}`);\n    total -= buffer[0].value;\n    buffer.shift();\n}\n// add the new sample to the end\nbuffer.push({timestamp: now, value: value});\ntotal += value;\n\ncontext.set('buffer', buffer);\ncontext.set('total', total);\n\nmsg.payload = parseFloat(total/buffer.length).toFixed(2);\n//node.warn(`length: ${buffer.length}, total: ${total}, average: ${msg.payload}`);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 640,
+        "y": 580,
+        "wires": [
+            [
+                "4d27bdb5.e83894"
+            ]
+        ]
+    },
+    {
+        "id": "4d27bdb5.e83894",
+        "type": "ui_gauge",
+        "z": "3d374899.d65d28",
+        "name": "",
+        "group": "6c780367.6c7ed4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Rolling Average",
+        "label": "ms",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "60",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 880,
+        "y": 580,
+        "wires": []
     }
 ]
